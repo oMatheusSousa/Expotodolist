@@ -19,3 +19,15 @@ export function Button({ title, ...rest }: ButtonProps) {
         </TouchableOpacity>
     );
 }
+
+export function TaskCard(){
+    <TouchableOpacity 
+        style={styles.buttonTask}
+        onPress={() => handleRemoveTask(item.id)}
+    >
+    <Text style={styles.textTask}>
+    {item.name}
+    </Text>
+    </TouchableOpacity>
+}
+

@@ -61,15 +61,11 @@ export function Home() {
         data={tasks}
         keyExtractor={item => item.id}
         renderItem={({ item }) => (
-          <TouchableOpacity 
-            style={styles.buttonTask}
+          <TaskCard
+            title ={item.name}
             onPress={() => handleRemoveTask(item.id)}
-          >
-            <Text style={styles.textTask}>
-              {item.name}
-            </Text>
-          </TouchableOpacity>
-        )
+          />
+          )
         }
       />
     </SafeAreaView>
